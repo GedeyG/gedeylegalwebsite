@@ -1,0 +1,191 @@
+body {
+  background-color: rgb(77, 82, 80);
+    margin: 0;
+    font-family: /*Helvetica,*/ Arial; /*sans-serif;*/
+  }
+
+  header {
+    background: rgb(115, 160, 212);
+  }
+
+  .kivalasztva {
+  color: white;
+  }
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 90rem;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+  footer {
+    display:flex;
+    justify-content: space-between;
+    background: rgb(115, 160, 212);
+    align-items: center;
+    margin-top:50px;
+    padding: 0 1rem;
+    text-align: center;
+  }
+
+  .menu {
+    list-style-type: none;
+    padding: 0;
+  }
+
+  .menulista {
+    display: inline-block;
+    padding: 0 1.25rem;
+  }
+
+  .logokep {
+    margin-top: 5px;
+   
+  }
+  li a {
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.5s;
+  }
+
+  li:hover a {
+    color:rgb(255, 255, 255);
+  }
+
+  /* Mobile Toggle */
+
+  .nav-toggle {
+    display: none;
+    position: absolute;
+    right: 1rem;
+    top: 1.5rem;
+    cursor: pointer;
+  }
+
+  .nav-toggle img {
+    width: 1.5rem;
+    transition: 300ms all ease;
+  }
+
+  .nav-toggle:hover img {
+    opacity: 0.6;
+  }
+
+  .open {
+    height: 50vh;
+  }
+
+  .hidden {
+    display: none;
+  }
+
+  .modul{
+    display:flex;
+    margin-top:15px;
+    margin-bottom: 15px;
+  }
+  .bal{
+    flex: 1;
+  }
+  .kozep{
+    flex: 5;
+    background-color:rgb(115, 160, 212);
+    padding: 40px 40px 40px 40px;
+    border-radius: 10px;
+    animation-duration: 0.5s;
+    animation-name: animate-fade;
+    animation-delay: 0.1s;
+    animation-fill-mode: backwards;
+  }
+  .jobb{
+    flex: 1;
+  }
+  .kep{
+    display:grid;
+    place-items: center;
+  }
+
+  .profilkep{
+   width:40%;
+   border-style: solid;
+   border-color: black;
+   border-radius: 10px;
+  }
+  
+  .Link{
+    color:white;
+    font-weight: bold;
+    transition: 0.5s;
+  }
+
+  .Link:hover{
+    color:black;
+  }
+  
+  @keyframes animate-fade {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  .google-maps {
+    position: relative;
+    padding-bottom: 75%; 
+    height: 0;
+    overflow: hidden;
+ }
+
+.google-maps iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100% !important;
+    height: 100% !important;
+}
+
+  /* Mobile */
+  @media all and (max-width: 720px) 
+  {
+    .container {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    nav {
+      height: 0;
+      width: 100%;
+      overflow: hidden;
+      transition: 250ms height ease-in-out;
+    }
+
+    .menulista {
+      display: block;
+      text-align: center;
+      padding: 1.5rem 0;
+    }
+
+    li a {
+      font-size: 1.4rem;
+    }
+
+    .nav-toggle {
+      display: block;
+    }
+
+    .bal{
+      flex: 1;
+    }
+
+    .kozep{
+     flex: 20;
+    }
+
+    .jobb{
+      flex: 1;
+    }
+  }
